@@ -378,7 +378,7 @@ function App() {
           setCurrentPlayer(prevPlayer => (prevPlayer + 1) % NUM_PLAYERS);
         }
         setCurrentPhaseIndex(nextPhaseIndex);
-        showGameMessage(`It's now ${playerRoles[(currentPlayer + 1) % NUM_PLAYERS]["Card Name"] || `Player ${(currentPlayer + 1) % NUM_PLAYERS}`}'s turn. Current phase: ${gamePhases[nextPhaseIndex]}.`, 3000);
+        showGameMessage(`It is ${playerRoles[(currentPlayer + 1) % NUM_PLAYERS]["Card Name"] || `Player ${(currentPlayer + 1) % NUM_PLAYERS}`}'s turn. Current phase: ${gamePhases[nextPhaseIndex]}.`, 3000);
         return; // Exit here, as phase is handled
       }
 
