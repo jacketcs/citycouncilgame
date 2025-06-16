@@ -636,7 +636,7 @@ function App() {
     if (shouldRemoveFromHand) {
       setPlayerHands(prevHands => {
         const newHands = [...prevHands];
-        newHands[0] = humanHand.filter((_, idx) => idx !== selectedCardIdx);
+    newHands[0] = humanHand.filter((_, idx) => idx !== selectedCardIdx);
         return newHands;
       });
     }
@@ -657,7 +657,7 @@ function App() {
     }}>
       {/* Header / Controls - Row 1 */}
       <div style={{ gridColumn: '1 / span 3', gridRow: '1', display: 'flex', justifyContent: 'space-between', alignItems: 'center', paddingBottom: '10px', borderBottom: '1px solid #ddd' }}>
-        <h1>Berkeley City Council Card Game</h1>
+      <h1>Berkeley City Council Card Game</h1>
         <button onClick={initializeGame} style={{ padding: '10px 15px', fontSize: '16px', cursor: 'pointer', background: '#007bff', color: 'white', border: 'none', borderRadius: '5px' }}>
           Deal New Game
         </button>
@@ -694,12 +694,12 @@ function App() {
           {humanHand.length > 0 ? (
             humanHand.map((card, idx) => (
               <CardDisplay
-                key={idx}
+            key={idx}
                 card={card}
-                onClick={() => {
-                  setSelectedCard(card);
-                  setSelectedCardIdx(idx);
-                }}
+            onClick={() => {
+              setSelectedCard(card);
+              setSelectedCardIdx(idx);
+            }}
                 isPlayable={isCardPlayableInPhase(card)}
                 isSelected={selectedCardIdx === idx}
                 disabled={currentPlayer !== 0}
