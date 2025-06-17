@@ -8,30 +8,33 @@ on:
 jobs:
   deploy:
     runs-on: ubuntu-latest
-    defaults:
-      run:
-        working-directory: ./
     steps:
-      - uses: actions/checkout@v4
+      - name: Checkout code
+        uses: actions/checkout@v4
 
-      - uses: actions/setup-node@v4
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
         with:
           node-version: '20'
 
       - name: Install dependencies
         run: npm install
+        working-directory: ./  # ← make sure this matches your project root
 
       - name: Build project
         run: npm run build
+        working-directory: ./  # ← again, explicitly from the root
 
-      - name: Debug - List dist folder contents
+      - name: List dist folder contents (debug)
         run: ls -la dist
+        working-directory: ./  # ← must be the folder where dist is created
 
       - name: Deploy to GitHub Pages
         uses: peaceiris/actions-gh-pages@v3
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           publish_branch: gh-pages
-          publish_dir: dist
+          publish_dir: ./dist
           force_orphan: true
+
 
