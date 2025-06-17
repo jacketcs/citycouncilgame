@@ -657,7 +657,7 @@ function App() {
     }}>
       {/* Header / Controls - Row 1 */}
       <div style={{ gridColumn: '1 / span 3', gridRow: '1', display: 'flex', justifyContent: 'space-between', alignItems: 'center', paddingBottom: '10px', borderBottom: '1px solid #ddd' }}>
-      <img src="/berkeleylogo.jpeg" alt="Berkeley Logo" style={{ height: '48px', marginRight: '16px' }} />       
+      <img src="assets/berkeleylogo.jpeg" alt="Berkeley Logo" style={{ height: '48px', marginRight: '16px' }} />       
         <h1 style={{ color: '#111' }}>Berkeley City Council: The Card Game</h1>
         <button onClick={initializeGame} style={{ padding: '10px 15px', fontSize: '16px', cursor: 'pointer', background: '#007bff', color: 'white', border: 'none', borderRadius: '5px' }}>
           Deal New Game
