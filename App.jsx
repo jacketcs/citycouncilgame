@@ -25,7 +25,7 @@ const gamePhases = [
 
 const phaseInstructions = {
   'Refresh Phase': 'Ready all exhausted cards and remove temporary effects.',
-  'Draw Phase': 'The active player draws 2 cards.',
+  'Draw Phase': 'Active player draws 2 cards.',
   'Council Phase: Agenda Proposal': 'You may play 1 Agenda card from your hand to the Council Docket. Select a card and click "Play This Card".',
   'Council Phase: Amendments': 'Players may play 1 Utility/Reaction card to modify the proposed Agenda.',
   'Voting Phase': 'All players will now cast their vote on the proposed Agenda.',
