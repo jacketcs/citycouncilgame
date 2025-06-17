@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import cardsData from './cards.json';
 
 const NUM_PLAYERS = 5; // 1 human + 4 AI
-const HAND_SIZE = 4; // Initial hand size
+const HAND_SIZE = 5; // Initial hand size
 const DRAW_PER_TURN = 2; // Cards drawn during Draw Phase
 const STARTING_VOTES = 3;
 const WIN_POWER_POINTS = 15; // Victory condition
