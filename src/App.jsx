@@ -657,7 +657,7 @@ function App() {
     }}>
       {/* Header / Controls - Row 1 */}
       <div style={{ gridColumn: '1 / span 3', gridRow: '1', display: 'flex', justifyContent: 'space-between', alignItems: 'center', paddingBottom: '10px', borderBottom: '1px solid #ddd' }}>
-      <h1>Berkeley City Council Card Game</h1>
+      <h1>Berkeley City Council, The Card Game</h1>
         <button onClick={initializeGame} style={{ padding: '10px 15px', fontSize: '16px', cursor: 'pointer', background: '#007bff', color: 'white', border: 'none', borderRadius: '5px' }}>
           Deal New Game
         </button>
